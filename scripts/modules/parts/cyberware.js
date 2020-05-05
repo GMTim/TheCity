@@ -18,7 +18,7 @@ export default class Cyberware {
         const title = this.element.find(".title")
         this.#private_corp = title.find(".corp")
         this.#private_brand = title.find(".brand")
-        this.#private_type = title.find(".type")
+        this.#private_type = this.element.find(".type")
         this.#private_tag_container = this.element.find(".tags")
         this.#private_tag_element = createTagElement()
         this.#private_description = this.element.find(".description")

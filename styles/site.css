@@ -1,0 +1,26 @@
+body {
+    background-image: url(../images/background.jpg);
+    background-repeat: repeat; 
+  }
+
+#main {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+#cyberware {
+    padding-bottom: 1rem;
+}
+.data-item {
+    text-indent: 1rem;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-radius: .5rem;
+    border: 1px solid white;
+}
+.data-item {
+    background-image: linear-gradient(to right, rgb(89,50,230), rgb(134,50,230), rgb(179,50,230), rgb(224,50,230));
+}
+.data-item .tag {
+    font-style: italic;
+}
