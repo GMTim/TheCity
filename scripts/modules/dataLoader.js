@@ -1,5 +1,5 @@
 export const DataFiles = {
-    cyberware: { file: "/data/cyberware.json", sort: (a, b) => {
+    cyberware: { file: "data/cyberware.json", sort: (a, b) => {
         const compare = (a, b) => {
             if (a < b) { return -1 }
             if (a > b) { return 1 }
