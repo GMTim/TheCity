@@ -1,7 +1,11 @@
 body {
     background-image: url(../images/background.jpg);
     background-repeat: repeat; 
-  }
+}
+img {
+    width: auto;
+    height: 100%;
+}
 
 #main {
     background-color: rgba(0, 0, 0, 0.8);
