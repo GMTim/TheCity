@@ -14,15 +14,12 @@ function downloadPart(part) {
 }
 
 class PartConstructor {
-    #private_part
-    #private_class
-
     constructor(part, partClass) {
-        this.#private_part = $(part)
-        this.#private_class = partClass
+        this.private_part = $(part)
+        this.private_class = partClass
     }
     create(data) {
-        return new this.#private_class(this.#private_part.clone(), data)
+        return new this.private_class(this.private_part.clone(), data)
     }
 }
 
