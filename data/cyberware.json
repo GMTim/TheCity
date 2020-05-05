@@ -1,0 +1,23 @@
+[
+    {
+        "corp":"Neo Horizons",
+        "brand":"Clarity OfficeSuite 8.8",
+        "type":"Neural Interface with Data Storage",
+        "description":"",
+        "tags":["high capacity", "high speed"]
+    },
+    {
+        "corp":"Ascention",
+        "brand":"Heptapic Action Lead OperatingSytem (HALO)",
+        "type":"Neural Interface with Remote Control",
+        "description":"",
+        "tags":["encrypted", "multi-tasking"]
+    },
+    {
+        "corp":"Soar Tech Inc",
+        "brand":"Raytheon",
+        "type":"Neural Interface with Targeting Suite",
+        "description":"Old model no longer in production.",
+        "tags":[]
+    }
+]
