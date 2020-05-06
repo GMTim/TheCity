@@ -5,5 +5,12 @@
         "type":"Silenced Machine Pistol",
         "description":"",
         "tags":["2-harm", "close/near", "autofire"]
+    },
+    {
+        "corp":"Life Co",
+        "brand":"Scrounger",
+        "type":"Machete",
+        "description":"Tagline: For when life takes you outside The City limits.",
+        "tags":["3-harm", "hand"]
     }
 ]
