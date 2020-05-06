@@ -19,5 +19,12 @@
         "type":"Neural Interface with Targeting Suite",
         "description":"Old model no longer in production.",
         "tags":[]
+    },
+    {
+        "corp":"Neo Horizons",
+        "brand":"Eyes Nouveaux",
+        "type":"Cyber-eyes",
+        "description":"Tagline: See the world through new eyes!",
+        "tags":["thermographic", "magnification", "flare compensation"]
     }
 ]
