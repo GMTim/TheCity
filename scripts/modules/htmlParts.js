@@ -1,7 +1,8 @@
 import * as Parts from "./parts/allParts.js"
 
 const PartFiles = {
-    cyberware: "html/cyberware.html"
+    cyberware: "html/cyberware.html",
+    gear: "html/gear.html"
 }
 function downloadPart(part) {
     return new Promise((resolve, reject) => {

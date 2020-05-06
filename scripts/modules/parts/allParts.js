@@ -1,3 +1,4 @@
 import Cyberware from "./cyberware.js"
+import Gear from "./gear.js"
 
-export { Cyberware }
+export { Cyberware, Gear }
