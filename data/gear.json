@@ -33,5 +33,33 @@
         "type":"Armoured Clothing",
         "description":"Subtract 1 when rolling the harm move.",
         "tags":["0-armor", "discreet"]
+    },
+    {
+        "corp":"Life Co",
+        "brand":"Inferno",
+        "type":"Heavy Duty Gloves",
+        "description":"Made from 100% authentic dinosaur hide.",
+        "tags":[]
+    },
+    {
+        "corp":"Neo Horizon",
+        "brand":"Noah",
+        "type":"Ark Wielder",
+        "description":"",
+        "tags":[]
+    },
+    {
+        "corp":"Danger Close*",
+        "brand":"PDW-50",
+        "type":"Heavy Pistol",
+        "description":"*: A division of Soar Tech Inc",
+        "tags":["3-harm", "close/near", "loud"]
+    },
+    {
+        "corp":"General Mills",
+        "brand":"Genuine Leathers",
+        "type":"Synth Leathers",
+        "description":"Subtract 1 when rolling the harm move.",
+        "tags":["0-armour", "discreet", "loud"]
     }
 ]
