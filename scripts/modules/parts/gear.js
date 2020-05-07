@@ -7,7 +7,7 @@ function createTagElement() {
 
 export default class Gear {
     constructor(gear, data) {
-        this.element = $(gear)
+        this.element = gear
         const title = this.element.find(".title")
         this.private_corp = title.find(".corp")
         this.private_brand = title.find(".brand")
