@@ -3,28 +3,25 @@ import { DataLoader, DataFiles } from "./modules/dataLoader.js"
 
 const parts = new HTMLParts()
 
-
 class Manager {
-	constructor(parts, id, dataFile) {
-		this.parts = parts
-		this.container = $("#" + id)
+	constructor(creator, elementId, dataFile) {
+		this.creator = creator
+		this.container = $("#" + elementId)
 		this.loader = new DataLoader()
 		this.file = dataFile
 		this.load()
 	}
 	async load() {
 		await this.loader.load(this.file)
+		for (const data of this.loader.data) {
+			const item = this.creator.create(data)
+			this.container.append(item.element)
+		}
 	}
 }
 
 $(async () => {
     await parts.download()
-    new Manager(parts, "cyberware", DataFiles.cyberware)
-    /* let cyberwareData = new DataLoader()
-    await cyberwareData.load(DataFiles.cyberware)
-    let container = $("#cyberware")
-    for (const data of cyberwareData.data) {
-        const cyberware = parts.cyberware.create(data)
-        container.append(cyberware.element)
-    } */
+    new Manager(parts.cyberware, "cyberware", DataFiles.cyberware)
+    new Manager(parts.gear, "gear", DataFiles.gear)
 }) 

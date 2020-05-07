@@ -28,5 +28,6 @@ export class HTMLParts {
     constructor() { }
     async download() {
         this.cyberware = new PartConstructor(await downloadPart(PartFiles.cyberware), Parts.Cyberware)
+        this.gear = new PartConstructor(await downloadPart(PartFiles.gear), Parts.Gear)
     }
 }
