@@ -1,5 +1,6 @@
 import { Sections } from "./sections.js"
 import * as Parts from "./parts/allParts.js"
+const content = $("#content")
 
 function load(url) {
     return new Promise((resolve, reject) => {
@@ -35,26 +36,49 @@ async function forEach(section) {
     }
 }
 
-export class Loader {
-    async download() {
-        await forEach(async (key, section) => {
-            this[key] = {}
-            this[key].data = await loadJSON(section.dataFile, section.sort)
-            const template = await load(section.template)
-            this[key].template = new PartConstructor(template, Parts[section.part])
-        })
-    }
-    async load() {
-        await forEach((key, section) => {
-            this.loadKey(key)
-        })
-    }
-    loadKey(key) {
-        const container = $("#"+key)
-        const item = this[key]
+async function createSection(id, name) {
+    let section = new Parts.Section(id, name)
+    await section.load()
+    content.append(section.element)
+}
+
+function loadKey(key, loader) {
+    const container = $("#"+key)
+    const item = loader[key]
+    if (item.data !== undefined) {
         for (const data of item.data) {
             const element = item.template.create(data)
             container.append(element.element)
         }
+    } else if (item.template !== undefined) {
+        container.append(item.template.create())
+    }
+}
+
+export class Loader {
+    async download() {
+        await forEach(async (key, section) => {
+            this[key] = {}
+            if (section.dataFile !== undefined) {
+                this[key].data = await loadJSON(section.dataFile, section.sort) }
+            if (section.template !== undefined) {
+                const template = await load(section.template)
+                this[key].template = new PartConstructor(template, Parts[section.part])
+            }
+        })
+    }
+    async load() {
+        await forEach((key, section) => {
+            loadKey(key, this)
+        })
+    }
+    async loadSection(key) {
+        this.clear()
+        const section = Sections[key]
+        await createSection(key, section.part)
+        loadKey(key, this)
+    }
+    clear() {
+        content.children().remove()
     }
 }
