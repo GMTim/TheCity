@@ -1,23 +1,27 @@
-let section = undefined
-async function getSection() {
-    if (section === undefined) {
-        section = await new Promise((resolve, reject) => {
-            $.get("html/section.html").done((data) => {
-                resolve(data)
-            }).fail((error) => { reject(error) })
-        })
-    }
-    return $(section)
-}
+import * as Base from "./basePart.js"
 
-export default class Section {
-    constructor(id, name) {
-        this.id = id
-        this.name = name
+export default class GearPart extends Base.BasePart {
+    constructor() {
+        super("section")
     }
-    async load() {
-        this.element = await getSection()
-        this.element.attr("id", this.id)
-        this.element.find(".header").text(this.name)
+    async load(key, title) {
+        await super.load()
+        this.private = {}
+        this.private.header = this.metadata.element.find(".header")
+        this.id = key
+        this.title = title
+    }
+    get id() { return this.metadata.element.attr("id") }
+    set id(value) { this.metadata.element.attr("id", value) }
+    get title() { return this.private.header.text() }
+    set title(value) {
+        if (value !== null) {
+            this.private.header.text(value)
+        } else {
+            this.private.header.parent().remove()
+        }
+    }
+    clearTitle() {
+        this.title = null
     }
 }

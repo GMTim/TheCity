@@ -1,9 +1,8 @@
-import { Loader } from "./modules/loader.js"
+import Coordinator from "./modules/coordinator.js"
+import * as Utlities from "./modules/utlities.js"
 
-const data = new Loader()
+const coordinator = new Coordinator()
 
 $(async () => {
-	await data.download()
-	await data.load()
-	// data.loadSection("cyberware")
+	coordinator.load(Utlities.Keys.cyberware)
 }) 
