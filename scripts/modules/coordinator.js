@@ -54,6 +54,8 @@ export default class Coordinator {
         this.sections[keys.map.key] = new Section(keys.map.key, null, Parts.Map)
         this.sections[keys.cyberware.key] = new Section(keys.cyberware.key, keys.cyberware.title, Parts.Cyberware, this.private.data)
         this.sections[keys.gear.key] = new Section(keys.gear.key, keys.gear.title, Parts.Gear, this.private.data)
+        this.sections[keys.weapons.key] = new Section(keys.weapons.key, keys.weapons.title, Parts.Gear, this.private.data)
+        this.sections[keys.armor.key] = new Section(keys.armor.key, keys.armor.title, Parts.Gear, this.private.data)
     }
     async load(key) {
         let unwrappedKey

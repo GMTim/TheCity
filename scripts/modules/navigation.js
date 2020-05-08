@@ -29,7 +29,7 @@ export default class Navigation {
         return item.target
     }
     bind() {
-        $(".nav-link").click((event) => {
+        $(".nav-link.internal").click((event) => {
             event.preventDefault()
             const item = new Item($(event.currentTarget))
             alterState(item, this.onClick)

@@ -1,0 +1,16 @@
+[
+    {
+        "corp":"Life Co",
+        "brand":"Trojan Man",
+        "type":"Armoured Clothing",
+        "description":"Subtract 1 when rolling the harm move.",
+        "tags":["0-armor", "discreet"]
+    },
+    {
+        "corp":"General Mills",
+        "brand":"Genuine Leathers",
+        "type":"Synth Leathers",
+        "description":"Subtract 1 when rolling the harm move.",
+        "tags":["0-armour", "discreet", "loud"]
+    }
+]

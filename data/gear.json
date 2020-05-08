@@ -1,40 +1,5 @@
 [
     {
-        "corp":"Neo Horizons",
-        "brand":"N11 v1.3 Silenced Machine Pistol",
-        "type":"Silenced Machine Pistol",
-        "description":"",
-        "tags":["2-harm", "close/near", "autofire"]
-    },
-    {
-        "corp":"Life Co",
-        "brand":"Scrounger",
-        "type":"Machete",
-        "description":"Tagline: For when life takes you outside The City limits.",
-        "tags":["3-harm", "hand"]
-    },
-    {
-        "corp":"Ascenscion",
-        "brand":"Dante",
-        "type":"Flame Thrower",
-        "description":"",
-        "tags":["3-harm", "near", "area", "loud", "denial", "reload"]
-    },
-    {
-        "corp":"Life Co",
-        "brand":"Preserver",
-        "type":"Holdout Pistol",
-        "description":"",
-        "tags":["2-harm", "hand/close", "discreet", "quick", "reload", "loud"]
-    },
-    {
-        "corp":"Life Co",
-        "brand":"Trojan Man",
-        "type":"Armoured Clothing",
-        "description":"Subtract 1 when rolling the harm move.",
-        "tags":["0-armor", "discreet"]
-    },
-    {
         "corp":"Life Co",
         "brand":"Inferno",
         "type":"Heavy Duty Gloves",
@@ -47,19 +12,5 @@
         "type":"Ark Wielder",
         "description":"",
         "tags":[]
-    },
-    {
-        "corp":"Danger Close*",
-        "brand":"PDW-50",
-        "type":"Heavy Pistol",
-        "description":"*: A division of Soar Tech Inc",
-        "tags":["3-harm", "close/near", "loud"]
-    },
-    {
-        "corp":"General Mills",
-        "brand":"Genuine Leathers",
-        "type":"Synth Leathers",
-        "description":"Subtract 1 when rolling the harm move.",
-        "tags":["0-armour", "discreet", "loud"]
     }
 ]

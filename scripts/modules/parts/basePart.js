@@ -72,6 +72,7 @@ export class BaseItem extends BasePart {
     }
     set tags(values) {
         this.private.tag_container.children().remove()
+        values = values.sort()
         for (const value of values) {
             const tagElement = this.private.tag_element.clone()
             tagElement.text("+" + value)
